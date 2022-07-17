@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+button {
+    cursor: pointer;
+}
+.compelete {
+    text-decoration: line-through;
+    opacity: 0.5;
+    transition: all linear 300ms;
+}
+.input-todo {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+@media (max-width: 700px) {
+    .input-todo {
+        width: 95%;
+        font-size: 1rem;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-todo input {
+    padding: 1rem;
+    outline: none;
+    background-color: none;
+    border: none;
+    flex: 6;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-todo button {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    background-color: none;
+    flex: 2;
+    white-space: nowrap;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 500px) {
+    .input-todo button {
+        white-space: auto;
+        padding: 0.8rem;
+    }
+    .input-todo input {
+        padding: 0.8rem;
+    }
 }
-
-.App-link {
-  color: #61dafb;
+@media (max-width: 300px) {
+    .input-todo button {
+        white-space: auto;
+        padding: 0.5rem;
+        flex: 2;
+    }
+    .input-todo input {
+        padding: 0.5rem;
+        flex: 1;
+    }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo button {
+    z-index: 2;
+}
+.todo {
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    transition: all linear 200ms;
+    width: 75%;
+}
+@media (max-width: 400px) {
+    .todo {
+        width: 95%;
+    }
+}
+.todo:hover {
+    background-color: rgb(226, 245, 253);
+}
+.input-edit input {
+    background-color: rgb(226, 245, 253);
+}
+.input-edit button {
+    background-color: rgb(189, 233, 252);
 }
